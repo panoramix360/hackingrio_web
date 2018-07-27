@@ -1,0 +1,44 @@
+.header__aba {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
+
+.header__logo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.header__img {
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.header__badge {
+    font-size: 10px;
+}
+
+.header {
+    margin-top: 20px;
+}
+
+.header__aba-inside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: #1b5068;
+}
+
+.header__texto--ativo {
+    color: #4ec3b3;
+}
+
+.linha_menu {
+    width: 100%;
+}
