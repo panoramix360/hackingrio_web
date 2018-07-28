@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "typeface-roboto";
-import "./App.css";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import LoginScreen from "./screens/Login/LoginScreen";
 import HomeScreen from "./screens/Home/HomeScreen";
@@ -20,10 +19,6 @@ class App extends Component {
                             <Route
                                 path="/"
                                 exact={true}
-                                component={LoginScreen}
-                            />
-                            <PrivateRoute
-                                path="/inicio"
                                 component={HomeScreen}
                             />
                         </Switch>
