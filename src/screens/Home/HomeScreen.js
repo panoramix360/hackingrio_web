@@ -1,12 +1,10 @@
-import { withStyles } from "@material-ui/core";
 import React, { Component } from "react";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import { styles } from "./styles";
-import { Link, Element } from "rc-scroll-anim";
+import { Link as LinkScroll, Element } from "rc-scroll-anim";
 
 class HomeScreen extends Component {
     render() {
-        const { classes } = this.props;
         return (
             <div>
                 <nav
@@ -50,7 +48,11 @@ class HomeScreen extends Component {
                                             />
                                         </div>
                                         <div className="form-group mb-2">
-                                            <a className="nav-link">Entrar</a>
+                                            <Link to="/orcamento">
+                                                <a className="nav-link">
+                                                    Entrar
+                                                </a>
+                                            </Link>
                                         </div>
                                     </form>
                                 </li>
@@ -76,11 +78,11 @@ class HomeScreen extends Component {
                                     sairem com segurança e no horário do seu
                                     ambiente empresarial
                                 </p>
-                                <Link className="nav-list" to="register">
+                                <LinkScroll className="nav-list" to="register">
                                     <a className="btn btn-primary btn-xl">
                                         Faça seu orçamento
                                     </a>
-                                </Link>
+                                </LinkScroll>
                             </div>
                         </div>
                     </div>
@@ -144,4 +146,4 @@ class HomeScreen extends Component {
     }
 }
 
-export default withStyles(styles)(withRouter(HomeScreen));
+export default withRouter(HomeScreen);
