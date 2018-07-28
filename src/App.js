@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "typeface-roboto";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import LoginScreen from "./screens/Login/LoginScreen";
 import HomeScreen from "./screens/Home/HomeScreen";
 import { Provider } from "mobx-react";
 import stores from "./stores";
