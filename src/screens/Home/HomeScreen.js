@@ -19,6 +19,8 @@ class HomeScreen extends Component {
         this.props.empresa.dados.nome = this.state.nome;
         this.props.empresa.login().then(() => {
             this.props.history.push('/orcamento');
+        }, () => {
+            alert('Falha no login.');
         });
     }
 
@@ -67,7 +69,7 @@ class HomeScreen extends Component {
                                             />
                                         </div>
                                         <div className="form-group mb-2">
-                                            <a className="nav-link" onClick={() => this.submitLogin()}>
+                                            <a className="nav-link" onClick={() => { this.submitLogin() }}>
                                                 Entrar
                                             </a>
                                         </div>

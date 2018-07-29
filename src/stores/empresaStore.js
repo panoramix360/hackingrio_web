@@ -1,5 +1,6 @@
 import { action, observable, computed } from "mobx";
 import EmpresaService from '../services/empresaService';
+import { promises } from "fs";
 
 export default class EmpresaStore {
     key_empresa = 'empresa';
@@ -19,7 +20,12 @@ export default class EmpresaStore {
         await EmpresaService.getEmpresa(this.dados.nome)
             .then(
                 (response) => {
-                    this.dados.funcionarios = response[0].funcionario;
+                    if (response) {
+                        this.dados.funcionarios = response[0].funcionario;
+                    }
+                    else {
+                        Promise.reject();
+                    }
                 },
                 (error) => {
                     console.log(error);

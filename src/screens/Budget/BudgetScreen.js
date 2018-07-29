@@ -14,7 +14,6 @@ class BudgetScreen extends Component {
 
     constructor(props) {
         super(props);
-        console.log(this.props.empresa.dados)
         this.state = {
             newUser: "",
             newCep: "",
@@ -100,30 +99,19 @@ class BudgetScreen extends Component {
                         <div className="col-sm-12" align="center">
                             <button type="button" className="btn btn-primary btn-lg">Cadastrar</button>
                         </div>
-                    </form>
+                    </form> */}
 
-
-                    <br /><br /><br />
-
-                    <div className="form-group row">
-                        <label
-                            for="model"
-                            className="col-sm-2 col-form-label"
-                        >
-                            Importar Planilha
-                        </label>
-                        <div className="col-sm-10">
-                            <input
-                                type="file"
-                                className="form-control-file"
-                                id="model"
-                            />
+                    <form>
+                        <div class="input-group mb-3">
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="inputGroupFile02" />
+                                <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Selecione o arquivo CSV para upload</label>
+                            </div>
+                            <div class="input-group-append" onClick="alert('Teste')">
+                                <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                            </div>
                         </div>
-                    </div> */}
-
-
-                    <br /><br /><br />
-
+                    </form>
 
                     <div>
                         <h1>Usuários Cadastrados</h1>
