@@ -1,5 +1,5 @@
 {
-    "name": "semaforo-front",
+    "name": "gowork-front",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -42,6 +42,7 @@
         "react-maskedinput": "^4.0.1",
         "react-router": "^3.2.1",
         "react-router-dom": "^4.2.2",
+        "react-responsive-modal": "^3.2.0",
         "resolve": "1.6.0",
         "style-loader": "0.19.0",
         "sw-precache-webpack-plugin": "0.11.4",

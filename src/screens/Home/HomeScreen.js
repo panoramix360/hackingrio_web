@@ -2,8 +2,26 @@ import React, { Component } from "react";
 import { withRouter, Link } from "react-router-dom";
 import { styles } from "./styles";
 import { Link as LinkScroll, Element } from "rc-scroll-anim";
+import { inject, observer } from "../../../node_modules/mobx-react";
 
+@inject('empresa')
+@observer
 class HomeScreen extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            nome: ""
+        }
+    }
+
+    submitLogin = () => {
+        this.props.empresa.dados.nome = this.state.nome;
+        this.props.empresa.login().then(() => {
+            this.props.history.push('/orcamento');
+        });
+    }
+
     render() {
         return (
             <div>
@@ -37,6 +55,7 @@ class HomeScreen extends Component {
                                                 className="form-control"
                                                 id="login"
                                                 placeholder="Usuário"
+                                                onChange={(value) => this.setState({ nome: value.target.value })}
                                             />
                                         </div>
                                         <div className="form-group mx-sm-3 mb-2">
@@ -48,11 +67,9 @@ class HomeScreen extends Component {
                                             />
                                         </div>
                                         <div className="form-group mb-2">
-                                            <Link to="/orcamento">
-                                                <a className="nav-link">
-                                                    Entrar
-                                                </a>
-                                            </Link>
+                                            <a className="nav-link" onClick={() => this.submitLogin()}>
+                                                Entrar
+                                            </a>
                                         </div>
                                     </form>
                                 </li>
