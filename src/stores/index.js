@@ -1,10 +1,10 @@
 import UserStore from "./userStore";
-import ExampleStore from "./exampleStore";
+import EmpresaStore from "./empresaStore";
 
 const userStore = new UserStore();
-const exampleStore = new ExampleStore();
+const empresaStore = new EmpresaStore();;
 
 export default {
   user: userStore,
-  exampleStore
+  empresa: empresaStore
 };
