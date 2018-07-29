@@ -1,1 +1,3 @@
-# hackingrio_web
+# BackOffice do GoWork
+
+Desenvolvido em ReactJS
